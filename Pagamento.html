@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Nome da empresa</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="" href="">
+    <link rel="" type="" href="">
+
+    <link rel="stylesheet" href="assets/css.payment/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css.payment/templatemo.css">
+    <link rel="stylesheet" href="assets/css.payment/card.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css.card/fontawesome.min.css">
+</head>
+
+<body>
+    <!-- Start Top Nav -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
+        <div class="container text-light">
+            <div class="w-100 d-flex justify-content-between">
+                <div>
+                    <i class="fa fa-envelope mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@company.com">info@email.com</a>
+                    <i class="fa fa-phone mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="tel:010-020-0340">010020-0340</a>
+                </div>
+                <div>
+                    <a class="text-light" href="https://fb.com/templatemo" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-sm fa-fw"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Top Nav -->
+
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand text-success logo h1 align-self-center" href="shop.html">
+                Logo
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            
+                <div class="navbar align-self-center d-flex">
+                    <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+                            <div class="input-group-text">
+                                <i class="fa fa-fw fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                    </a>
+                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
+                    </a>
+                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <!-- Modal -->
+    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form  class="form" action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="loader">
+        <img src="assets/img/ajax-loader.gif" alt="carregamento...">
+    </div>
+
+    <div class="overlay"></div>
+
+    <!-- Open Content -->
+    <section class="bg-light">
+        <div class="components-card">
+            <div class="conteiner-carrinho">            
+                <div class="row">
+                    <div class="col-lg-7 mt-5">
+                        <div class="card-b">
+                            <header class="cabecalho-pagamento">
+                                <div class="tipo-pagamento" data-state="open">
+                                    <button class="botao-tipo-pagamento" onclick="mostrarConteudo('cartao')">
+                                        <h2 class="h2-tipo-pagamento">Cartão de Credito</h2>
+                                    </button>
+                                </div>
+                                <div class="tipo-pagamento" data-state="closed">
+                                    <button class="botao-tipo-pagamento" onclick="mostrarConteudo('pix')">
+                                        <h2 class="h2-tipo-pagamento">Pix</h2>
+                                    </button>
+                                </div>
+                                <div class="tipo-pagamento" data-state="closed">
+                                    <button class="botao-tipo-pagamento" onclick="mostrarConteudo('boleto')">
+                                        <h2 class="h2-tipo-pagamento">Boleto</h2>
+                                    </button>
+                                </div>
+                            </header>
+                            <main class="main-pagamento">
+                                <div id="conteudo-cartao" style="display: block;">                              
+                                    <form class="formulario-pagamento" action="processar_pagamento" method="post">
+                                        <input type="text" class="form-control-formulario border-grey" id="subscribeEmail" placeholder="Nome no Cartão">
+                                        <br>
+
+                                        <input type="text" class="form-control-formulario border-grey" id="subscribeEmail" placeholder="Data de Nascimento">
+                                        <br>
+                                
+                                        <input type="text" class="form-control-formulario border-grey" id="subscribeEmail" placeholder="Numero do Cartão">
+                                        <br>
+                                
+                                        <input type="text" class="form-control-formulario border-grey" id="subscribeEmail" placeholder="Data de Validade">
+                                        <br>
+                                
+                                        <input type="text" class="form-control-formulario border-grey" id="subscribeEmail" placeholder="Código de Segurança">
+                                        <br>
+                                    <div class="footer-cartao">
+                                        <div class="parcelamento">
+                                            <label for="parcelamento">Número de Parcelas:</label>
+                                            <select id="parcelamento" name="parcelamento">
+                                                <option value="1">1x</option>
+                                                <option value="2">2x</option>
+                                                <option value="3">3x</option>
+                                                <option value="6">6x</option>
+                                                <option value="12">12x</option>
+                                            </select>
+                                        </div>
+                                        
+                                
+                                        <button class="input-group-text btn-success-cartao text-light" type="submit">Enviar Pagamento</button>
+                                    </div>
+                                    </form>
+                                </div>
+                                <div id="conteudo-pix" style="display: none;">
+                                    <!-- Conteúdo para Pix -->
+                                    <p>Este é o conteúdo do Pix.</p>
+                                </div>
+                                <div id="conteudo-boleto" style="display: none;">
+                                    <!-- Conteúdo para Boleto -->
+                                    <p>Este é o conteúdo do Boleto.</p>
+                                </div>
+                            </main>                            
+                        </div>
+                        
+                        <script>
+                        function mostrarConteudo(tipoPagamento) {
+                            // Oculta todos os conteúdos
+                            document.getElementById("conteudo-cartao").style.display = "none";
+                            document.getElementById("conteudo-pix").style.display = "none";
+                            document.getElementById("conteudo-boleto").style.display = "none";
+                            
+                            // Mostra o conteúdo correspondente ao tipo de pagamento selecionado
+                            document.getElementById("conteudo-" + tipoPagamento).style.display = "block";
+                        }
+                        </script>
+                        
+                        
+                        <script>
+                        function mostrarConteudo(tipoPagamento) {
+                            // Oculta todos os conteúdos
+                            document.getElementById("conteudo-cartao").style.display = "none";
+                            document.getElementById("conteudo-pix").style.display = "none";
+                            document.getElementById("conteudo-boleto").style.display = "none";
+                            
+                            // Mostra o conteúdo correspondente ao tipo de pagamento selecionado
+                            document.getElementById("conteudo-" + tipoPagamento).style.display = "block";
+                        }
+                        </script>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Close Content -->
+
+    <!-- Start Article -->
+
+    <!-- End Article -->
+
+
+    <!-- Start Brands -->
+
+    <!--End Brands-->
+
+
+    <!-- Start Footer -->
+    <footer class="bg-dark" id="tempaltemo_footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">*Nome da Empresa*</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt fa-fw"></i>
+                            Rua/Avenida, 123 - Bairro - Cidade, Estado 10660-009
+                        </li>
+                        <li>
+                            <i class="fa fa-phone fa-fw"></i>
+                            <a class="text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope fa-fw"></i>
+                            <a class="text-decoration-none" href="mailto:info@company.com">info@email.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Categorias</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="#">Tipo de Produto 1</a></li>
+                        <li><a class="text-decoration-none" href="#">Tipo de Produto 2</a></li>
+                        <li><a class="text-decoration-none" href="#">Tipo de Produto 3</a></li>
+                        <li><a class="text-decoration-none" href="#">Tipo de Produto 4</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Informacoes</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="#">Home</a></li>
+                        <li><a class="text-decoration-none" href="#">Quem Somos</a></li>
+                        <li><a class="text-decoration-none" href="#">Envio</a></li>
+                        <li><a class="text-decoration-none" href="#">Pagamento</a></li>
+                        <li><a class="text-decoration-none" href="#">Fale Conosco</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="row text-light mb-4">
+                <div class="col-12 ">
+                    <div class="w-100 my-3 border-top border-light"></div>
+                </div>
+                <div class="col-auto me-auto">
+                    <ul class="list-inline text-left footer-icons">
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <label class="sr-only" for="subscribeEmail">Email</label>
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email">
+                        <div class="input-group-text btn-success text-light">Se Inscreva</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>   
+    <!-- End Script -->
+</body>
+
+</html>

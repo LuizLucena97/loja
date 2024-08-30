@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Nome da empresa</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="" href="">
+    <link rel="" type="" href="">
+
+    <link rel="stylesheet" href="assets/css.card/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css.card/templatemo.css">
+    <link rel="stylesheet" href="assets/css.card/card.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css.card/fontawesome.min.css">
+</head>
+
+<body>
+    <!-- Start Top Nav -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
+        <div class="container text-light">
+            <div class="w-100 d-flex justify-content-between">
+                <div>
+                    <i class="fa fa-envelope mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@company.com">info@email.com</a>
+                    <i class="fa fa-phone mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="tel:010-020-0340">010020-0340</a>
+                </div>
+                <div>
+                    <a class="text-light" href="https://fb.com/templatemo" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-sm fa-fw"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Top Nav -->
+
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand text-success logo h1 align-self-center" href="Loja.html">
+                Logo
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            
+                <div class="navbar align-self-center d-flex">
+                    <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+                            <div class="input-group-text">
+                                <i class="fa fa-fw fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                    </a>
+                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
+                    </a>
+                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <!-- Modal -->
+    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form  class="form" action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="loader">
+        <img src="assets/img/ajax-loader.gif" alt="carregamento...">
+    </div>
+
+    <div class="overlay"></div>
+
+    <!-- Open Content -->
+    <section class="bg-light">
+        <div class="components-card">
+            <div class="conteiner-carrinho">
+
+                <div class="row-1">
+                    <div class="col-lg-7-1 mt-5-1">
+                        <div class="card-b">
+                            <div class="card-body">
+                                <div class="cart">
+                                    <section class="calcular-frete">
+                                        <div class="titulo-frete">
+                                            <h3>Frete</h3>
+                                        </div>
+                                        <div class="conteudo-frete">
+                                            <input type="text" class="form-control" id="cepInput" placeholder="CEP">
+                                            <input type="text" class="form-control" id="ruaInput" placeholder="Rua">
+                                            <input type="text" class="form-control" id="numeroInput" placeholder="Nº">
+                                            <input type="text" class="form-control" id="bairroInput" placeholder="Bairro">
+                                            <input type="text" class="form-control" id="cidadeInput" placeholder="Cidade">
+                                            <input type="text" class="form-control" id="estadoInput" placeholder="Estado">
+                                        </div>
+                                        <div class="btn-frete">
+                                            <button type="button" class="btn btn-success btn-lg" id="calcularFreteButton" name="submit" value="addtocard">Calcular Frete</button>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="col-lg-7 mt-5">
+                        <div class="card-b">
+                            <div class="card-body">
+                                <div class="cart">
+                                    <h2>Carrinho de Compras</h2>
+                                    <table class="cart-table">
+                                        <thead>
+                                        <tr>
+                                            <th class="table-head-item first-col">Item</th>
+                                            <th class="table-head-item second-col">Preço</th>
+                                            <th class="table-head-item third-col">Quantidade</th>
+                                        </tr>
+                                        </thead>
+                            
+                                        <tbody id="cart-table-body">
+                                        
+                                        </tbody>
+                            
+                                        <tfoot>
+                                        <tr>
+                                            <td colspan="3" class="cart-total-container">
+                                            </td>
+                                        </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="conteiner-carrinho2">
+
+                <div class="card-b-2">
+                    <div class="card-body">
+                        <div class="cart">
+                            <section class="resumo-carrinho">
+                                <div class="titulo-resumo">
+                                    <h3>Resumo</h3>
+                                </div>
+                                <div class="resumo">
+
+                                    <div class="valor">
+                                        Valor dos Produtos:
+                                        <p class="conteudo-valor">
+                                        <span id="conteudo-valor">R$0</span>
+                                        </p>
+                                    </div>
+                                    <div class="valor">
+                                        Frete:
+                                        <p class="conteudo-valor-frete">R$0</p>
+                                    </div>
+                                    <div class="valor-total">
+                                        Total:
+                                        <p class="conteudo-valor-total"></p>
+                                    </div>
+
+                                    <div class="btn-resumo">
+                                        <button type="button" class="btn btn-success btn-lg" name="submit" value="addtocard">IR PARA PAGAMENTO</button>
+                                        <button type="button" class="btn btn-success btn-lg" name="submit" value="addtocard">CONTINUAR COMPRANDO</button>
+                                    </div>
+
+                                </div>
+                            </section>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Close Content -->
+
+    <!-- Start Article -->
+
+    <!-- End Article -->
+
+
+    <!-- Start Brands -->
+
+    <!--End Brands-->
+
+
+    <!-- Start Footer -->
+    <footer class="bg-dark" id="tempaltemo_footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">*Nome da Empresa*</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt fa-fw"></i>
+                            Rua/Avenida, 123 - Bairro - Cidade, Estado 10660-009
+                        </li>
+                        <li>
+                            <i class="fa fa-phone fa-fw"></i>
+                            <a class="text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope fa-fw"></i>
+                            <a class="text-decoration-none" href="mailto:info@company.com">info@email.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Categorias</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="#">Tipo de Produto 1</a></li>
+                        <li><a class="text-decoration-none" href="#">Tipo de Produto 2</a></li>
+                        <li><a class="text-decoration-none" href="#">Tipo de Produto 3</a></li>
+                        <li><a class="text-decoration-none" href="#">Tipo de Produto 4</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Informacoes</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="#">Home</a></li>
+                        <li><a class="text-decoration-none" href="#">Quem Somos</a></li>
+                        <li><a class="text-decoration-none" href="#">Envio</a></li>
+                        <li><a class="text-decoration-none" href="#">Pagamento</a></li>
+                        <li><a class="text-decoration-none" href="#">Fale Conosco</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="row text-light mb-4">
+                <div class="col-12 ">
+                    <div class="w-100 my-3 border-top border-light"></div>
+                </div>
+                <div class="col-auto me-auto">
+                    <ul class="list-inline text-left footer-icons">
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <label class="sr-only" for="subscribeEmail">Email</label>
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email">
+                        <div class="input-group-text btn-success text-light">Se Inscreva</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+    
+    <script>
+        // Recuperar os itens do carrinho do localStorage
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
+        // Selecionar o corpo da tabela onde os itens do carrinho serão adicionados
+        const cartTableBody = document.getElementById("cart-table-body");
+    
+        // Percorrer os itens do carrinho e adicioná-los à tabela
+        cart.forEach(item => {
+            const row = document.createElement("tr");
+            row.classList.add("cart-product");
+    
+            const identificationCell = document.createElement("td");
+            const image = document.createElement("img");
+            image.src = item.image;
+            image.alt = item.title;
+            image.classList.add("cart-product-image");
+    
+            const title = document.createElement("strong");
+            title.classList.add("cart-product-title");
+            title.textContent = item.title;
+    
+            identificationCell.appendChild(image);
+            identificationCell.appendChild(title);
+    
+            const priceCell = document.createElement("td");
+            priceCell.classList.add("cart-product-price");
+            priceCell.textContent = 'R$' + item.price;
+    
+            const quantityCell = document.createElement("td");
+            const quantityInput = document.createElement("input");
+            quantityInput.type = "number";
+            quantityInput.value = item.quantity;
+            quantityInput.min = "0";
+            quantityInput.classList.add("product-qtd-input");
+    
+            const removeButtonCell = document.createElement("td");
+            const removeButton = document.createElement("button");
+            removeButton.type = "button";
+            removeButton.classList.add("remove-product-button");
+            removeButton.textContent = "Remover";
+    
+            removeButton.addEventListener("click", function() {
+                removeItemFromCart(item);
+            });
+    
+            quantityCell.appendChild(quantityInput);
+            removeButtonCell.appendChild(removeButton);
+    
+            row.appendChild(identificationCell);
+            row.appendChild(priceCell);
+            row.appendChild(quantityCell);
+            row.appendChild(removeButtonCell);
+    
+            cartTableBody.appendChild(row);
+        });
+    
+        // Função para remover um item do carrinho
+        function removeItemFromCart(item) {
+            // Encontre o índice do item no carrinho
+            const itemIndex = cart.findIndex(cartItem => cartItem === item);
+    
+            if (itemIndex !== -1) {
+                // Remove o item do carrinho
+                cart.splice(itemIndex, 1);
+    
+                // Atualize o carrinho no localStorage
+                localStorage.setItem("cart", JSON.stringify(cart));
+    
+                // Encontre a linha da tabela correspondente ao item
+                const cartProductElements = document.querySelectorAll(".cart-product");
+    
+                for (let i = 0; i < cartProductElements.length; i++) {
+                    const titleElement = cartProductElements[i].querySelector(".cart-product-title");
+    
+                    if (titleElement && titleElement.textContent === item.title) {
+                        // Remove a linha da tabela
+                        cartProductElements[i].remove();
+                        break; // Saia do loop assim que a linha for removida
+                    }
+                }
+    
+                // Recalcule o total do carrinho após a remoção do item
+                calcularTotalCarrinho();
+            }
+        }
+    
+        // Defina uma função que calcula o total do carrinho
+        // Defina uma função que calcula o total do carrinho
+        // Defina uma função que calcula o total do carrinho com base nas quantidades
+    function calcularTotalCarrinho() {
+        // Selecione todos os elementos de preço e quantidade dos produtos
+        var precos = document.querySelectorAll('.cart-product-price');
+        var quantidades = document.querySelectorAll('.product-qtd-input');
+    
+        // Inicialize uma variável para o total
+        var total = 0;
+    
+        // Itere sobre os elementos de preço e quantidade e some os valores multiplicados
+        for (var i = 0; i < precos.length; i++) {
+        // Obtenha o texto do preço e remova o "R$" no início
+        var precoTexto = precos[i].textContent;
+        var precoNumerico = parseFloat(precoTexto.replace('R$', '').trim());
+    
+        // Obtenha a quantidade
+        var quantidade = parseFloat(quantidades[i].value);
+    
+        // Some o resultado da multiplicação ao total
+        total += precoNumerico * quantidade;
+        }
+    
+        // Atualize o elemento de total no carrinho com o novo valor
+        var totalElement = document.getElementById('conteudo-valor');
+        totalElement.textContent = 'R$' + total.toFixed(2); // Formate o total com duas casas decimais
+    }
+    
+    // Chame a função para calcular o total inicial
+    calcularTotalCarrinho();
+
+    // Selecione todos os elementos de quantidade dos produtos
+    var quantityInputs = document.querySelectorAll('.product-qtd-input');
+
+    // Adicione um evento de mudança (change) a cada campo de entrada de quantidade
+    quantityInputs.forEach(function(input) {
+    input.addEventListener('change', function() {
+        calcularTotalCarrinho();
+        calcularTotal();
+    });
+    });
+  
+
+    const cepInput = document.getElementById('cepInput');
+    const ruaInput = document.getElementById('ruaInput');
+    const bairroInput = document.getElementById('bairroInput');
+    const cidadeInput = document.getElementById('cidadeInput');
+    const estadoInput = document.getElementById('estadoInput');
+
+    cepInput.addEventListener('blur', () => {
+        const cep = cepInput.value.replace(/\D/g, '');
+
+        if (cep.length !== 8) {
+            alert('Digite um CEP válido com 8 dígitos.');
+            return;
+        }
+
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+            .then(response => response.json())
+            .then(data => {
+                if (!data.erro) {
+                    ruaInput.value = data.logradouro;
+                    bairroInput.value = data.bairro;
+                    cidadeInput.value = data.localidade;
+                    estadoInput.value = data.uf;
+                } else {
+                    alert('CEP não encontrado.');
+                }
+            })
+            .catch(error => {
+                alert('Erro ao buscar dados do CEP:', error);
+            });
+    });
+
+        // Adicione um event listener ao botão para chamar a função calcularFrete quando clicado
+        document.getElementById("calcularFreteButton").addEventListener("click", function() {
+            // Verifique se o campo de entrada de CEP está vazio
+            const cepInputValue = document.getElementById("cepInput").value.trim();
+            if (cepInputValue === '') {
+                alert('Por favor, digite um CEP antes de calcular o frete.');
+                return; // Não faz nada se o campo estiver vazio
+            }
+        
+            // Exiba o indicador de carregamento
+            document.querySelector('.overlay').style.display = 'block';
+            document.querySelector('.loader').style.display = 'block';
+            
+            // Chame a função para calcular o frete
+            calcularFrete();
+        });
+
+    // Função para calcular o frete
+    function calcularFrete() {
+        // Obtenha o valor do CEP de destino a partir do campo de entrada
+        const cepOrigem = '13223452'
+        const cepDestino = document.getElementById("cepInput").value.replace(/[^\d]/g, '');;
+
+        // Construa a URL com os CEPs de origem e destino
+        const apiUrl = `https://www.cepcerto.com/ws/json-frete/${cepOrigem}/${cepDestino}/100/30/30/30`;
+
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                // Verifique se a resposta da API inclui o campo "valorsedex"
+                if (!data.erro) {
+                    const valorSedex = parseFloat(data.valorsedex.replace(",", "."));
+
+                    // Armazene o valor do Sedex no localStorage como uma string
+                    localStorage.setItem("valorSedex", valorSedex.toString());
+
+                    // Chame a função para buscar e exibir o valor do Sedex
+                    exibirValorSedex();
+                } else {
+                    console.error('A resposta da API não inclui o campo "valorsedex".');
+                }
+
+                // Oculte o indicador de carregamento após a conclusão da solicitação
+                document.querySelector('.loader').style.display = 'none';
+                document.querySelector('.overlay').style.display = 'none';
+
+                calcularTotal();
+            })
+            .catch(error => {
+                console.error('Erro ao calcular frete:', error);
+
+                // Certifique-se de ocultar o indicador de carregamento em caso de erro também
+                document.querySelector('.loader').style.display = 'none';
+            });
+    }
+
+    // Função para buscar e exibir o valor do Sedex a partir do localStorage
+    function exibirValorSedex() {
+        // Obtenha o valor do Sedex armazenado no localStorage
+        const valorSedex = localStorage.getItem("valorSedex");
+
+        // Verifique se o valor do Sedex existe no localStorage
+        if (valorSedex !== null) {
+            // Exiba o valor do Sedex no elemento HTML
+            document.querySelector('.conteudo-valor-frete').textContent = `R$ ${parseFloat(valorSedex).toFixed(2)}`;
+        } else {
+            console.error('O valor do Sedex não foi encontrado no localStorage.');
+        }
+    }
+
+    function calcularTotal() {
+        // Chame as funções para calcular o valor dos produtos e o frete
+        var valorProdutos = parseFloat(document.querySelector('#conteudo-valor').textContent.replace('R$', '').trim());
+        var valorFrete = parseFloat(document.querySelector('.conteudo-valor-frete').textContent.replace('R$', '').trim());
+    
+    
+        // Calcule o valor total somando o valor dos produtos e o frete
+        var valorTotal = valorProdutos + valorFrete;
+    
+        // Atualize o elemento HTML com o valor total
+        var elementoValorTotal = document.querySelector(".conteudo-valor-total");
+        elementoValorTotal.textContent = "R$" + valorTotal.toFixed(2);
+        // Exibe o valor total com duas casas decimais.
+    }
+    
+
+    </script>
+    
+    <!-- End Script -->
+</body>
+
+</html>
